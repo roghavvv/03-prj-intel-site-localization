@@ -1014,4 +1014,37 @@ html[dir="rtl"] .skip-link {
     padding: 30px 18px;
   }
 
+}/* =========================
+   FOOTER LINKS
+========================= */
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+.footer-links a:focus-visible {
+  outline: 3px solid #00c7fd;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Keep footer navigation centered in RTL mode */
+html[dir="rtl"] .footer-links {
+  direction: rtl;
 }
