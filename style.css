@@ -1,0 +1,557 @@
+/* =========================
+   GENERAL PAGE STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7f9;
+  color: #1f2933;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  min-height: 78vh;
+
+  background: linear-gradient(
+    135deg,
+    #0071c5,
+    #003c71
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 60px 20px;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.intel-logo {
+  width: 170px;
+  margin-bottom: 35px;
+}
+
+.hero h1 {
+  color: white;
+
+  font-size: clamp(2.5rem, 6vw, 5rem);
+
+  line-height: 1.05;
+
+  margin-bottom: 25px;
+
+  letter-spacing: -2px;
+}
+
+.hero p {
+  color: #e8f3fa;
+
+  font-size: 1.15rem;
+
+  max-width: 700px;
+
+  margin: 0 auto 35px;
+}
+
+.hero-button {
+  display: inline-block;
+
+  text-decoration: none;
+
+  color: #0071c5;
+  background: white;
+
+  padding: 14px 28px;
+
+  border-radius: 30px;
+
+  font-weight: bold;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   TIMELINE HEADING
+========================= */
+
+.timeline-heading {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  padding: 80px 20px 45px;
+}
+
+.eyebrow {
+  color: #0071c5;
+
+  text-transform: uppercase;
+
+  font-size: 0.85rem;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+.timeline-heading h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+
+  margin-bottom: 15px;
+
+  color: #111827;
+}
+
+.timeline-heading p:last-child {
+  color: #64748b;
+
+  font-size: 1.05rem;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+  display: flex;
+
+  gap: 24px;
+
+  overflow-x: auto;
+
+  padding: 25px 7vw 45px;
+
+  justify-content: flex-start;
+
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+}
+
+
+/* Timeline scrollbar */
+
+.timeline::-webkit-scrollbar {
+  height: 8px;
+}
+
+.timeline::-webkit-scrollbar-track {
+  background: #dbe3e8;
+
+  border-radius: 20px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+  background: #0071c5;
+
+  border-radius: 20px;
+}
+
+
+/* =========================
+   TIMELINE CARDS
+========================= */
+
+.timeline-card {
+  position: relative;
+
+  flex: 0 0 330px;
+
+  min-height: 430px;
+
+  background-color: white;
+
+  border-radius: 18px;
+
+  padding: 230px 25px 30px;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  scroll-snap-align: center;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* LevelUp: CSS Transform */
+
+.timeline-card:hover {
+  transform: translateY(-10px) scale(1.025);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Image overlay */
+
+.timeline-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 205px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.02),
+    rgba(0, 0, 0, 0.3)
+  );
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   ALL NINE CARD IMAGES
+========================= */
+
+/* 1968 - Intel Founded */
+
+.timeline-card:nth-child(1) {
+  background-image: url("img/1.jpg");
+}
+
+
+/* 1971 - First Microprocessor */
+
+.timeline-card:nth-child(2) {
+  background-image: url("img/2.jpg");
+}
+
+
+/* 1978 - 8086 Processor */
+
+.timeline-card:nth-child(3) {
+  background-image: url("img/3.jpg");
+}
+
+
+/* 1985 - 386 Processor */
+
+.timeline-card:nth-child(4) {
+  background-image: url("img/4.jpg");
+}
+
+
+/* 2006 - Peak GHG Emissions */
+
+.timeline-card:nth-child(5) {
+  background-image: url("img/5.jpg");
+}
+
+
+/* 2020 - RISE Strategy */
+
+.timeline-card:nth-child(6) {
+  background-image: url("img/6.jpg");
+}
+
+
+/* 2022 - Net-Zero by 2040 */
+
+.timeline-card:nth-child(7) {
+  background-image: url("img/7.jpg");
+}
+
+
+/* 2023 - Renewable Electricity */
+
+.timeline-card:nth-child(8) {
+  background-image: url("img/8.jpg");
+}
+
+
+/* 2024 - Sustainability Summit */
+
+.timeline-card:nth-child(9) {
+  background-image: url("img/9.jpg");
+}
+
+
+/* Apply consistent image styling
+   to every timeline card */
+
+.timeline-card {
+  background-size: 100% 205px;
+
+  background-position: top center;
+
+  background-repeat: no-repeat;
+
+  background-color: white;
+}
+
+
+/* =========================
+   YEAR LABEL
+========================= */
+
+.year {
+  position: absolute;
+
+  top: 155px;
+
+  left: 24px;
+
+  z-index: 2;
+
+  background: #00c7fd;
+
+  color: #002b49;
+
+  padding: 7px 14px;
+
+  border-radius: 25px;
+
+  font-size: 0.95rem;
+
+  font-weight: bold;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.timeline-card:hover .year {
+  transform: translateY(-3px);
+
+  background: #ffffff;
+
+  color: #0071c5;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.card-content {
+  position: relative;
+
+  z-index: 3;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+
+  color: #111827;
+
+  margin-bottom: 15px;
+
+  line-height: 1.2;
+}
+
+.card-content p {
+  color: #52606d;
+
+  font-size: 0.96rem;
+
+  opacity: 0.72;
+
+  transform: translateY(5px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* Reveal more clearly on hover */
+
+.timeline-card:hover .card-content p {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================
+   SCROLL MESSAGE
+========================= */
+
+.scroll-message {
+  text-align: center;
+
+  padding: 0 20px 70px;
+
+  color: #64748b;
+}
+
+.scroll-message p {
+  color: #0071c5;
+
+  font-weight: bold;
+
+  margin-bottom: 4px;
+}
+
+.scroll-message span {
+  font-size: 0.9rem;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #002b49;
+
+  color: #cbd5e1;
+
+  text-align: center;
+
+  padding: 30px 20px;
+
+  font-size: 0.9rem;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+
+  .hero {
+    min-height: 70vh;
+
+    padding: 50px 22px;
+  }
+
+  .intel-logo {
+    width: 135px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    padding: 12px 22px;
+  }
+
+
+  /* Timeline heading */
+
+  .timeline-heading {
+    padding: 60px 20px 30px;
+  }
+
+
+  /* Switch timeline from
+     horizontal to vertical */
+
+  .timeline {
+    flex-direction: column;
+
+    overflow-x: visible;
+
+    padding: 20px;
+
+    gap: 25px;
+
+    scroll-snap-type: none;
+  }
+
+
+  .timeline-card {
+    flex: none;
+
+    width: 100%;
+
+    min-height: 420px;
+
+    scroll-snap-align: none;
+
+    background-size: 100% 205px;
+  }
+
+
+  /* Smaller hover movement
+     for mobile */
+
+  .timeline-card:hover {
+    transform: translateY(-5px);
+  }
+
+
+  /* Remove horizontal
+     scroll instruction */
+
+  .scroll-message p {
+    display: none;
+  }
+
+}
+
+
+/* =========================
+   EXTRA SMALL SCREENS
+========================= */
+
+@media (max-width: 420px) {
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .timeline-heading h2 {
+    font-size: 2rem;
+  }
+
+  .timeline-card {
+    min-height: 440px;
+  }
+
+}
