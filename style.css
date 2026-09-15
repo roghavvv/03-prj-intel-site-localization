@@ -1,11 +1,15 @@
+/* =========================================================
+   INTEL SUSTAINABILITY WEBSITE
+   PROJECT 3 - LOCALIZATION, ACCESSIBILITY & BOOTSTRAP
+========================================================= */
+
+
 /* =========================
    GENERAL PAGE STYLES
 ========================= */
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -13,10 +17,58 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
+
   font-family: Arial, Helvetica, sans-serif;
+
   background: #f4f7f9;
   color: #1f2933;
+
   line-height: 1.6;
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+/* Skip link is hidden until
+   keyboard users focus on it */
+
+.skip-link {
+  position: absolute;
+
+  top: -60px;
+  left: 20px;
+
+  z-index: 9999;
+
+  background: #ffffff;
+  color: #0071c5;
+
+  padding: 12px 20px;
+
+  border-radius: 0 0 8px 8px;
+
+  font-weight: bold;
+  text-decoration: none;
+
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+
+/* Strong keyboard focus indicator */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #00c7fd;
+  outline-offset: 3px;
 }
 
 
@@ -48,11 +100,13 @@ body {
 
 .intel-logo {
   width: 170px;
+  height: auto;
+
   margin-bottom: 35px;
 }
 
 .hero h1 {
-  color: white;
+  color: #ffffff;
 
   font-size: clamp(2.5rem, 6vw, 5rem);
 
@@ -61,6 +115,8 @@ body {
   margin-bottom: 25px;
 
   letter-spacing: -2px;
+
+  font-weight: 700;
 }
 
 .hero p {
@@ -79,9 +135,11 @@ body {
   text-decoration: none;
 
   color: #0071c5;
-  background: white;
+  background: #ffffff;
 
   padding: 14px 28px;
+
+  border: 2px solid #ffffff;
 
   border-radius: 30px;
 
@@ -89,13 +147,19 @@ body {
 
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .hero-button:hover {
   transform: translateY(-4px);
 
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+
+  background: #00c7fd;
+  color: #002b49;
+  border-color: #00c7fd;
 }
 
 
@@ -133,10 +197,12 @@ body {
   margin-bottom: 15px;
 
   color: #111827;
+
+  font-weight: 700;
 }
 
 .timeline-heading p:last-child {
-  color: #64748b;
+  color: #475569;
 
   font-size: 1.05rem;
 }
@@ -193,7 +259,7 @@ body {
 
   min-height: 430px;
 
-  background-color: white;
+  background-color: #ffffff;
 
   border-radius: 18px;
 
@@ -211,7 +277,7 @@ body {
 }
 
 
-/* LevelUp: CSS Transform */
+/* LevelUp CSS Transform */
 
 .timeline-card:hover {
   transform: translateY(-10px) scale(1.025);
@@ -249,71 +315,44 @@ body {
    ALL NINE CARD IMAGES
 ========================= */
 
-/* 1968 - Intel Founded */
-
 .timeline-card:nth-child(1) {
   background-image: url("img/1.jpg");
 }
-
-
-/* 1971 - First Microprocessor */
 
 .timeline-card:nth-child(2) {
   background-image: url("img/2.jpg");
 }
 
-
-/* 1978 - 8086 Processor */
-
 .timeline-card:nth-child(3) {
   background-image: url("img/3.jpg");
 }
-
-
-/* 1985 - 386 Processor */
 
 .timeline-card:nth-child(4) {
   background-image: url("img/4.jpg");
 }
 
-
-/* 2006 - Peak GHG Emissions */
-
 .timeline-card:nth-child(5) {
   background-image: url("img/5.jpg");
 }
-
-
-/* 2020 - RISE Strategy */
 
 .timeline-card:nth-child(6) {
   background-image: url("img/6.jpg");
 }
 
-
-/* 2022 - Net-Zero by 2040 */
-
 .timeline-card:nth-child(7) {
   background-image: url("img/7.jpg");
 }
 
-
-/* 2023 - Renewable Electricity */
-
 .timeline-card:nth-child(8) {
   background-image: url("img/8.jpg");
 }
-
-
-/* 2024 - Sustainability Summit */
 
 .timeline-card:nth-child(9) {
   background-image: url("img/9.jpg");
 }
 
 
-/* Apply consistent image styling
-   to every timeline card */
+/* Consistent image styling */
 
 .timeline-card {
   background-size: 100% 205px;
@@ -322,7 +361,7 @@ body {
 
   background-repeat: no-repeat;
 
-  background-color: white;
+  background-color: #ffffff;
 }
 
 
@@ -334,7 +373,6 @@ body {
   position: absolute;
 
   top: 155px;
-
   left: 24px;
 
   z-index: 2;
@@ -355,7 +393,8 @@ body {
 
   transition:
     transform 0.3s ease,
-    background-color 0.3s ease;
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .timeline-card:hover .year {
@@ -385,6 +424,8 @@ body {
   margin-bottom: 15px;
 
   line-height: 1.2;
+
+  font-weight: 700;
 }
 
 .card-content p {
@@ -402,7 +443,7 @@ body {
 }
 
 
-/* Reveal more clearly on hover */
+/* Reveal details on hover */
 
 .timeline-card:hover .card-content p {
   opacity: 1;
@@ -420,7 +461,7 @@ body {
 
   padding: 0 20px 70px;
 
-  color: #64748b;
+  color: #475569;
 }
 
 .scroll-message p {
@@ -436,26 +477,408 @@ body {
 }
 
 
+/* =========================================================
+   BOOTSTRAP THREE-COLUMN
+   SUSTAINABILITY SECTION
+========================================================= */
+
+.sustainability-goals {
+  background: #ffffff;
+}
+
+.sustainability-goals h2,
+.sustainability-details h2,
+.newsletter h2 {
+  color: #111827;
+
+  font-weight: 700;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.goals-intro {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  color: #64748b;
+
+  font-size: 1.05rem;
+}
+
+
+/* Individual Bootstrap column cards */
+
+.goal-card {
+  background: #f4f7f9;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+
+  padding: 38px 28px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+
+  border-color: #00c7fd;
+}
+
+
+/* Bootstrap Icons */
+
+.goal-icon {
+  display: inline-block;
+
+  color: #0071c5;
+
+  font-size: 3rem;
+
+  margin-bottom: 20px;
+
+  transition: transform 0.3s ease;
+}
+
+.goal-card:hover .goal-icon {
+  transform: scale(1.12);
+}
+
+.goal-card h3 {
+  color: #111827;
+
+  font-size: 1.45rem;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.goal-card p {
+  color: #52606d;
+
+  margin-bottom: 25px;
+}
+
+
+/* Intel-style Bootstrap buttons */
+
+.btn-outline-primary {
+  color: #0071c5;
+
+  border-color: #0071c5;
+
+  border-radius: 25px;
+
+  padding: 9px 20px;
+
+  font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0071c5;
+
+  border-color: #0071c5;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   BOOTSTRAP ACCORDION
+========================================================= */
+
+.sustainability-details {
+  background: #f4f7f9;
+}
+
+.sustainability-details .container {
+  max-width: 900px;
+}
+
+.accordion {
+  margin-top: 30px;
+}
+
+.accordion-item {
+  border: 1px solid #dbe3e8;
+
+  margin-bottom: 12px;
+
+  border-radius: 12px !important;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-button {
+  color: #111827;
+
+  background: #ffffff;
+
+  font-weight: 700;
+
+  padding: 20px 24px;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #ffffff;
+
+  background: #0071c5;
+
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 3px rgba(0, 199, 253, 0.35);
+}
+
+.accordion-body {
+  color: #52606d;
+
+  background: #ffffff;
+
+  padding: 24px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   NEWSLETTER FORM
+========================================================= */
+
+.newsletter {
+  background: #ffffff;
+}
+
+.newsletter-box {
+  background: linear-gradient(
+    135deg,
+    #0071c5,
+    #003c71
+  );
+
+  border-radius: 22px;
+
+  padding: 50px;
+
+  color: #ffffff;
+
+  box-shadow: 0 18px 40px rgba(0, 60, 113, 0.2);
+}
+
+.newsletter .eyebrow {
+  color: #70d8ff;
+}
+
+.newsletter h2 {
+  color: #ffffff;
+
+  margin-bottom: 15px;
+}
+
+.newsletter p {
+  color: #e8f3fa;
+
+  margin-bottom: 0;
+}
+
+.newsletter-form {
+  background: rgba(255, 255, 255, 0.1);
+
+  padding: 25px;
+
+  border-radius: 14px;
+}
+
+.newsletter-form .form-label {
+  color: #ffffff;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+.newsletter-form .form-control {
+  min-height: 48px;
+
+  border: 2px solid transparent;
+}
+
+.newsletter-form .form-control:focus {
+  border-color: #00c7fd;
+
+  box-shadow: 0 0 0 3px rgba(0, 199, 253, 0.25);
+}
+
+.newsletter-form .btn-primary {
+  background: #00c7fd;
+
+  color: #002b49;
+
+  border-color: #00c7fd;
+
+  padding-left: 22px;
+  padding-right: 22px;
+
+  font-weight: 700;
+}
+
+.newsletter-form .btn-primary:hover {
+  background: #ffffff;
+
+  color: #0071c5;
+
+  border-color: #ffffff;
+}
+
+.newsletter-form .form-text {
+  color: #d9effb;
+
+  margin-top: 9px;
+}
+
+
 /* =========================
    FOOTER
 ========================= */
 
-footer {
+.site-footer {
   background: #002b49;
 
   color: #cbd5e1;
 
   text-align: center;
 
-  padding: 30px 20px;
+  padding: 45px 20px;
 
   font-size: 0.9rem;
 }
 
+.footer-logo {
+  width: 95px;
 
-/* =========================
+  height: auto;
+
+  margin-bottom: 18px;
+}
+
+.site-footer p {
+  margin-bottom: 5px;
+}
+
+.footer-note {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   RIGHT-TO-LEFT LANGUAGE SUPPORT
+========================================================= */
+
+/*
+   When dir="rtl" is applied to the HTML element,
+   the website automatically adapts for languages
+   such as Arabic.
+*/
+
+html[dir="rtl"] body {
+  direction: rtl;
+
+  text-align: right;
+}
+
+
+/* Hero remains centered */
+
+html[dir="rtl"] .hero,
+html[dir="rtl"] .timeline-heading,
+html[dir="rtl"] .scroll-message,
+html[dir="rtl"] .sustainability-goals .text-center,
+html[dir="rtl"] .sustainability-details .text-center,
+html[dir="rtl"] .site-footer {
+  text-align: center;
+}
+
+
+/* Reverse timeline direction */
+
+html[dir="rtl"] .timeline {
+  direction: rtl;
+}
+
+
+/* Move year badge to the right */
+
+html[dir="rtl"] .year {
+  left: auto;
+
+  right: 24px;
+}
+
+
+/* Align card content naturally */
+
+html[dir="rtl"] .card-content {
+  text-align: right;
+}
+
+
+/* Bootstrap goal cards */
+
+html[dir="rtl"] .goal-card {
+  text-align: center;
+}
+
+
+/* Accordion */
+
+html[dir="rtl"] .accordion-button {
+  text-align: right;
+}
+
+
+/* Newsletter */
+
+html[dir="rtl"] .newsletter-box {
+  text-align: right;
+}
+
+html[dir="rtl"] .newsletter-form {
+  text-align: right;
+}
+
+
+/* Flip input group order */
+
+html[dir="rtl"] .input-group {
+  direction: rtl;
+}
+
+
+/* Skip link */
+
+html[dir="rtl"] .skip-link {
+  left: auto;
+
+  right: 20px;
+}
+
+
+/* =========================================================
    MOBILE RESPONSIVE DESIGN
-========================= */
+========================================================= */
 
 @media (max-width: 700px) {
 
@@ -489,8 +912,7 @@ footer {
   }
 
 
-  /* Switch timeline from
-     horizontal to vertical */
+  /* Timeline becomes vertical */
 
   .timeline {
     flex-direction: column;
@@ -518,19 +940,49 @@ footer {
   }
 
 
-  /* Smaller hover movement
-     for mobile */
-
   .timeline-card:hover {
     transform: translateY(-5px);
   }
 
 
-  /* Remove horizontal
-     scroll instruction */
+  /* Remove horizontal scroll instruction */
 
   .scroll-message p {
     display: none;
+  }
+
+
+  /* Newsletter */
+
+  .newsletter-box {
+    padding: 35px 22px;
+  }
+
+  .newsletter-form {
+    padding: 20px;
+  }
+
+
+  /* Stack form input/button */
+
+  .newsletter-form .input-group {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .newsletter-form .form-control {
+    width: 100%;
+
+    border-radius: 8px !important;
+
+    margin-bottom: 10px;
+  }
+
+  .newsletter-form .btn {
+    width: 100%;
+
+    border-radius: 8px !important;
   }
 
 }
@@ -552,6 +1004,14 @@ footer {
 
   .timeline-card {
     min-height: 440px;
+  }
+
+  .goal-card {
+    padding: 30px 20px;
+  }
+
+  .newsletter-box {
+    padding: 30px 18px;
   }
 
 }

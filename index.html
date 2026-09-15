@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Explore Intel's sustainability journey, environmental goals, and progress toward a more sustainable future."
+  />
+
   <title>Intel: Sustainability Through the Ages</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+  />
+
+  <!-- Our Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+  <!-- Skip Link for Accessibility -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
 
   <!-- Header / Hero Section -->
   <header class="hero">
@@ -16,7 +40,7 @@
       <img
         class="intel-logo"
         src="img/intel-header-logo.svg"
-        alt="Intel Logo"
+        alt="Intel"
       />
 
       <h1>Sustainability Through the Ages</h1>
@@ -27,18 +51,23 @@
         and our planet.
       </p>
 
-      <a href="#timeline" class="hero-button">Explore the Journey ↓</a>
+      <a href="#timeline" class="hero-button">
+        Explore the Journey ↓
+      </a>
 
     </div>
   </header>
 
 
-  <!-- Timeline Section -->
-  <main>
+  <!-- Main Content -->
+  <main id="main-content">
 
+    <!-- Timeline Heading -->
     <div class="timeline-heading">
       <p class="eyebrow">Intel Sustainability Journey</p>
+
       <h2>Innovation Through Time</h2>
+
       <p>
         Explore some of the milestones that shaped Intel's technology
         and sustainability journey.
@@ -46,7 +75,12 @@
     </div>
 
 
-    <section class="timeline" id="timeline">
+    <!-- Timeline -->
+    <section
+      class="timeline"
+      id="timeline"
+      aria-label="Intel sustainability timeline"
+    >
 
       <!-- Card 1 -->
       <article class="timeline-card">
@@ -199,12 +233,358 @@
       <span>Hover over each card to learn more.</span>
     </div>
 
+
+    <!-- Sustainability Goals -->
+    <section
+      class="sustainability-goals py-5"
+      aria-labelledby="goals-heading"
+    >
+
+      <div class="container">
+
+        <div class="text-center mb-5">
+          <p class="eyebrow">Building a Sustainable Future</p>
+
+          <h2 id="goals-heading">
+            Our Sustainability Goals
+          </h2>
+
+          <p class="goals-intro">
+            Intel is working toward ambitious environmental goals through
+            responsible innovation, climate action, water stewardship,
+            and waste reduction.
+          </p>
+        </div>
+
+
+        <div class="row g-4 text-center">
+
+          <!-- Column 1 -->
+          <div class="col-12 col-md-4">
+            <div class="goal-card h-100">
+
+              <i
+                class="bi bi-bar-chart-line goal-icon"
+                aria-hidden="true"
+              ></i>
+
+              <h3>RISE Strategy</h3>
+
+              <p>
+                Intel's RISE strategy focuses on creating a more responsible,
+                inclusive, sustainable, and enabling future through technology
+                and collaboration.
+              </p>
+
+              <a href="#rise-details" class="btn btn-outline-primary">
+                Learn More
+              </a>
+
+            </div>
+          </div>
+
+
+          <!-- Column 2 -->
+          <div class="col-12 col-md-4">
+            <div class="goal-card h-100">
+
+              <i
+                class="bi bi-globe2 goal-icon"
+                aria-hidden="true"
+              ></i>
+
+              <h3>Climate Commitment</h3>
+
+              <p>
+                Intel is working toward net-zero greenhouse gas emissions
+                across its global operations while expanding renewable
+                electricity and energy efficiency.
+              </p>
+
+              <a href="#climate-details" class="btn btn-outline-primary">
+                Learn More
+              </a>
+
+            </div>
+          </div>
+
+
+          <!-- Column 3 -->
+          <div class="col-12 col-md-4">
+            <div class="goal-card h-100">
+
+              <i
+                class="bi bi-droplet goal-icon"
+                aria-hidden="true"
+              ></i>
+
+              <h3>Water &amp; Waste</h3>
+
+              <p>
+                Intel continues investing in water conservation, restoration,
+                recycling, and waste reduction to reduce the environmental
+                impact of its operations.
+              </p>
+
+              <a href="#water-details" class="btn btn-outline-primary">
+                Learn More
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Bootstrap Accordion LevelUp -->
+    <section
+      class="sustainability-details py-5"
+      aria-labelledby="details-heading"
+    >
+
+      <div class="container">
+
+        <div class="text-center mb-4">
+          <p class="eyebrow">Learn More</p>
+          <h2 id="details-heading">Sustainability in Action</h2>
+        </div>
+
+
+        <div class="accordion" id="sustainabilityAccordion">
+
+          <!-- Accordion Item 1 -->
+          <div class="accordion-item" id="rise-details">
+
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseRise"
+                aria-expanded="true"
+                aria-controls="collapseRise"
+              >
+                RISE Strategy
+              </button>
+            </h3>
+
+            <div
+              id="collapseRise"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#sustainabilityAccordion"
+            >
+              <div class="accordion-body">
+                RISE stands for Responsible, Inclusive, Sustainable, and
+                Enabling. The strategy connects Intel's technology and
+                operations with long-term social and environmental goals.
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- Accordion Item 2 -->
+          <div class="accordion-item" id="climate-details">
+
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseClimate"
+                aria-expanded="false"
+                aria-controls="collapseClimate"
+              >
+                Climate Commitment
+              </button>
+            </h3>
+
+            <div
+              id="collapseClimate"
+              class="accordion-collapse collapse"
+              data-bs-parent="#sustainabilityAccordion"
+            >
+              <div class="accordion-body">
+                Intel has committed to achieving net-zero greenhouse gas
+                emissions across its global operations by 2040 while
+                continuing to invest in renewable electricity and more
+                efficient manufacturing.
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- Accordion Item 3 -->
+          <div class="accordion-item" id="water-details">
+
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseWater"
+                aria-expanded="false"
+                aria-controls="collapseWater"
+              >
+                Water &amp; Waste
+              </button>
+            </h3>
+
+            <div
+              id="collapseWater"
+              class="accordion-collapse collapse"
+              data-bs-parent="#sustainabilityAccordion"
+            >
+              <div class="accordion-body">
+                Intel's sustainability work also includes conserving and
+                restoring water, increasing recycling, and reducing waste
+                throughout its operations.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Newsletter -->
+    <section
+      class="newsletter py-5"
+      aria-labelledby="newsletter-heading"
+    >
+
+      <div class="container">
+        <div class="newsletter-box">
+
+          <div class="row align-items-center g-4">
+
+            <div class="col-12 col-lg-6">
+
+              <p class="eyebrow">Stay Informed</p>
+
+              <h2 id="newsletter-heading">
+                Sustainability Newsletter
+              </h2>
+
+              <p>
+                Subscribe to receive updates about Intel's sustainability
+                initiatives, environmental progress, and future goals.
+              </p>
+
+            </div>
+
+
+            <div class="col-12 col-lg-6">
+
+              <form class="newsletter-form">
+
+                <label for="email" class="form-label">
+                  Email address
+                </label>
+
+                <div class="input-group">
+
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    aria-describedby="email-help"
+                    required
+                  />
+
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                  >
+                    Subscribe
+                  </button>
+
+                </div>
+
+                <div id="email-help" class="form-text">
+                  We'll only use your email for sustainability updates.
+                </div>
+
+              </form>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
 
-  <footer>
-    <p>Intel Sustainability Through the Ages</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <img
+        src="img/intel-header-logo.svg"
+        alt="Intel"
+        class="footer-logo"
+      />
+
+      <p>Intel Sustainability Through the Ages</p>
+
+      <p class="footer-note">
+        Innovation for a more sustainable future.
+      </p>
+
+    </div>
+
   </footer>
 
+
+  <!-- Bootstrap JavaScript -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+<script>
+  // Automatically adjust the page direction based on language
+  function updatePageDirection() {
+    const currentLanguage =
+      document.documentElement.lang ||
+      navigator.language ||
+      "en";
+
+    const languageCode = currentLanguage
+      .toLowerCase()
+      .split("-")[0];
+
+    const rtlLanguages = [
+      "ar", // Arabic
+      "he", // Hebrew
+      "fa", // Persian
+      "ur"  // Urdu
+    ];
+
+    if (rtlLanguages.includes(languageCode)) {
+      document.documentElement.setAttribute("dir", "rtl");
+    } else {
+      document.documentElement.setAttribute("dir", "ltr");
+    }
+  }
+
+  updatePageDirection();
+
+  // Detect future changes to the page language
+  const languageObserver = new MutationObserver(updatePageDirection);
+
+  languageObserver.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["lang"]
+  });
+</script>
 </body>
 </html>
